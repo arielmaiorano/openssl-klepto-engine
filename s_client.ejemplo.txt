@@ -1,0 +1,7 @@
+
+$ "GET /" | openssl s_client -ign_eof -tls1_2 -cipher AES128-SHA -connect www.google.com:443 -servername www.google.com
+
+
+$ echo "GET /" | openssl s_client -ign_eof -engine klepto -debug -tls1_2 -cipher AES128-SHA -connect www.google.com:443 -servername www.google.com 1> s_client.1.txt 2> s_client.2.txt
+
+
